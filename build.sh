@@ -1,11 +1,11 @@
 #!/bin/sh -e
-export A=$(uname -m)
-export R=$(pwd)/out/
-export S=$(pwd)/out/$A-unknown-linux-musl/
+export A=${A:-$(uname -m)}
+export R=${R:-$(pwd)/out/}
+export S=${S:-$R/$A-unknown-linux-musl/}
 export CFLAGS="-Os"
 export LDFLAGS="-s"
-export CC=gcc
-export PATH=$(pwd)/out/bin${PATH:+:}$PATH
+export CC=${CC:-gcc}
+export PATH=$R/bin${PATH:+:}$PATH
 
 rm -rf $R
 mkdir -p $R

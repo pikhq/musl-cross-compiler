@@ -14,7 +14,7 @@ CFLAGS="$CFLAGS -D_GNU_SOURCE -fgnu89-inline" ./configure \
     --disable-multilib --disable-nls --disable-shared \
     --disable-mudflap --disable-libmudflap --disable-libssp \
     --disable-libgomp --disable-bootstrap \
-    --target=$A-unknown-linux-musl --host=$A-unknown-linux-gnu
+    --target=$A-unknown-linux-musl
 
 make all-gcc
 make install-gcc

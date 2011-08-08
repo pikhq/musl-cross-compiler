@@ -16,3 +16,4 @@ ln -s . $R/usr
 ./gcc.build.sh
 export CC=$A-unknown-linux-musl-gcc
 ./musl.build.sh
+./linux-headers.build.sh
